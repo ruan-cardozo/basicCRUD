@@ -1,14 +1,28 @@
-GET http://localhost:3000/aluno HTTP/1.1
+//Visualizar
+GET http://localhost:3000/alunos HTTP/1.1
 Content-Type: application/json
 
 ###
-
-POST http://localhost:3000/aluno HTTP/1.1
+//Inserir
+POST http://localhost:3000/aluno/inserir HTTP/1.1
 Content-Type: application/json
 
 {
-    "matricula": 1,
-    "nome" : "Mariazinha",
-    "endereco": "rua das palmeiras",
+    "matricula": 3,
+    "nome" : "João Teste",
+    "endereco": "rua teste",
     "cidade": "joinville"
 }
+###
+//Editar
+PUT http://localhost:3000/aluno/editar/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "nome" : "Mariazinha da Silva",
+    "endereco": "rua sol",
+    "cidade": "blumenau"
+}
+
+###
+//Deletar
